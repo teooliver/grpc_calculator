@@ -1,3 +1,19 @@
+# Running
+
+This project contains two binaries, a server and a client.
+
+## Server
+
+```
+cargo run --bin server
+```
+
+## Client
+
+```
+cargo run --bin client
+```
+
 # Commands:
 
 - Without reflection we need to send the `proto` flag
@@ -24,8 +40,6 @@ grpcurl -emit-defaults -plaintext '[::1]:50051' calculator.Admin.GetRequestCount
 ```
 grpcurl -H "Authorization: Bearer some-secret-token"  -emit-defaults -plaintext '[::1]:50051' calculator.Admin.GetRequestCount
 ```
-
-
 
 # Notes
 - Check the build.rs to understand how `tonic` uses `::compile_protos` and
